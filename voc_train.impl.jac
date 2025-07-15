@@ -9,7 +9,7 @@ impl VocabTrainer.start_game {
     end: `root | card = here;
     vocab = generate_word();
     print(vocab);
-    self.word = vocab["word"];
+    self.word = vocab;
 
     for i = 0 to i < 3 by i += 1 {
         end ++> (end := flashcard());
