@@ -18,5 +18,3 @@ impl check_guess.checking {
     }
 }
 
-
-#jac serve voc_train.jac

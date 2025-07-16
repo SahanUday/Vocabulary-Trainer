@@ -6,9 +6,8 @@ glob llm = Gemini(model_name="gemini-2.5-flash", verbose=False);
 
 # LLM-powered functions
 
-"""Avoid simple or concrete nouns like: apple, ball, table, sea, car, food, etc.
-    Generate high school level vocabulary words"""
-def generate_word() -> str byllm();        # Gives a new word with definition
+"""Avoid simple or concrete nouns like: apple, ball, table, sea, car, food, etc and also avoid generate the same word over and over again.Generate high school level vocabulary words"""
+def generate_word() -> str byllm();   # Gives a new word with definition
 
 """Your job is to check whether the guess is semantically the same as the vocabulary word."""
 def check_guesses(guess: str, word: str) -> bool byllm();  # Compares user guess
