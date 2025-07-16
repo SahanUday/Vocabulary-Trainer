@@ -63,7 +63,7 @@ It’s an engaging way for students and learners to practice language and vocabu
 
 ### ✅ Requirements
 
-* Python 3.10+
+* Python 3.12+
 * [JacLang CLI](https://jaclang.com/docs/getting-started/installation/)
 * Streamlit: `pip install streamlit`
 * Jaseci Mount (for mtllm plugin): `jac mount install mtllm`
