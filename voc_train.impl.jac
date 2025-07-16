@@ -1,29 +1,22 @@
-impl flashcard.check {
-    print("💡 Word to define: " + visitor.word);
-    guess = input("Enter your guess for what it means: ");
-    visitor.process_guess(guess);
-    visit [-->];
-}
-
 impl VocabTrainer.start_game {
-    end: `root | card = here;
-    vocab = generate_word();
-    print(vocab);
-    self.word = vocab;
-
-    for i = 0 to i < 3 by i += 1 {
-        end ++> (end := flashcard());
-    }
-
-    visit [-->];
+    report {
+        "New word generated": generate_word(),
+    };
 }
 
-impl VocabTrainer.process_guess(guess: str) {
-    if check_guess(guess, self.word) {
-        print("✅ That's correct! 🎉 Well done.");
-        disengage;
+impl check_guess.checking {
+    new_card = flashcard(word=self.word, guess=self.guess);
+    here ++> new_card;  ## link new_post to 
+    
+    # Check if the guess is correct
+    result = check_guesses(new_card.word, new_card.guess);
+    if result {
+        report{"Correct":new_card.guess};
     } else {
-        hint = explain_word(self.word, guess);
-        print("❌ Not quite. Here's a hint:\n" + hint);
+        hint = explain_word(new_card.word, new_card.guess);
+        report{"Hint:" : hint};
     }
 }
+
+
+#jac serve voc_train.jac

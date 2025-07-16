@@ -6,29 +6,36 @@ glob llm = Gemini(model_name="gemini-2.5-flash", verbose=False);
 
 # LLM-powered functions
 
-"""Avoid simple or concrete nouns like: apple, ball, table, sea, car, food, etc."""
+"""Avoid simple or concrete nouns like: apple, ball, table, sea, car, food, etc.
+    Generate high school level vocabulary words"""
 def generate_word() -> str byllm();        # Gives a new word with definition
 
 """Your job is to check whether the guess is semantically the same as the vocabulary word."""
-def check_guess(guess: str, word: str) -> bool byllm();  # Compares user guess
+def check_guesses(guess: str, word: str) -> bool byllm();  # Compares user guess
 
 """Provides a helpful hint or explanation for the given word based on the user's guess.
    If the guess is close, it gives a hint; otherwise, it explains the word."""
 def explain_word(word: str, user_guess: str) -> str byllm(); # Gives helpful hint
 
-walker VocabTrainer {
-    has word: str = "";
-    has meaning: str = "";
-
-    can start_game with `root entry;
-    def process_guess(guess: str);
-}
-
 node flashcard {
-    can check with VocabTrainer entry;
+    has word: str;
+    has guess: str;
 }
 
-# Run the trainer
-with entry {
-    VocabTrainer() spawn root;
+walker VocabTrainer {
+    obj __specs__ {
+        # static has methods: list = ["post"];   # Allow POST requests
+        static has auth: bool = False;         # No auth required
+    }
+    can start_game with `root entry;
+}
+
+walker check_guess {
+    has guess: str;
+    has word: str;
+
+    obj __specs__ {
+        static has auth: bool = False;
+    }
+    can checking with `root entry;
 }
