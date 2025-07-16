@@ -35,7 +35,7 @@ It’s an engaging way for students and learners to practice language and vocabu
 
 * **Jac Language** – Core logic and LLM API handling
 * **Google Gemini AI** – Word generation, checking, and hint explanation
-* **Python 3.10+** – Backend runtime for Jac
+* **Python 3.12+** – Backend runtime for Jac
 * **Streamlit** – Simple and effective frontend for game UI
 * **VS Code** – Recommended IDE
 * **Jaseci Runtime** – Required to run Jac projects locally
