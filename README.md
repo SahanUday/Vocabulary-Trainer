@@ -64,10 +64,11 @@ It’s an engaging way for students and learners to practice language and vocabu
 ### ✅ Requirements
 
 * Python 3.12+
-* [JacLang CLI](https://jaclang.com/docs/getting-started/installation/)
+* JacLang: `pip install jaclang`
 * Streamlit: `pip install streamlit`
-* Jaseci Mount (for mtllm plugin): `jac mount install mtllm`
-* Gemini API Key: [Get it here](https://makersuite.google.com/app)
+* MTLLM plugin: `pip install mtllm[google]`
+* Jac Cloud: `pip install jac-cloud`
+* Gemini API Key: [Get it here](https://aistudio.google.com/app/apikey)
 
 ---
 
@@ -92,12 +93,12 @@ $env:GEMINI_API_KEY="your_api_key_here"
 **1. Clone the Repository**:
 ```bash
    git clone https://github.com/SahanUday/Vocabulary-Trainer.git
-   cd vocabulary-trainer
+   cd Vocabulary-Trainer
 ```
 
 **2. Run Jac Backend Server**:
 ```bash
-   ac serve voc_train.jac
+   jac serve voc_train.jac
 ```
 
 **3. Launch the Frontend**:
@@ -116,6 +117,8 @@ $env:GEMINI_API_KEY="your_api_key_here"
 
 Here’s a quick look at how the Vocabulary Trainer Game interface appears:
 
+👉 [Click to watch the demo video](demo/demo_vid.mp4)
+
 <img width="1764" height="854" alt="image" src="https://github.com/user-attachments/assets/c0e7a36f-d8b6-4414-9645-4109985ad0ac" />
 
 > 🧠 The game encourages contextual guessing and LLM-guided learning for vocabulary enrichment!
@@ -125,24 +128,19 @@ Here’s a quick look at how the Vocabulary Trainer Game interface appears:
 ## 🤝 Contribution
 
 We welcome contributions to expand features like:
-    📊 Score leaderboard
-    🧠 Word difficulty levels
-    ⏱️ Timed challenges
-    🔐 User authentication
+* 📊 Score leaderboard
+* 🧠 Word difficulty levels
+* ⏱️ Timed challenges
+* 🔐 User authentication
+  
 Fork the repo, create a feature branch, and submit a pull request!
 
 ---
 
 ## 🛠 Built With
 
-🧬 JacLang – for core logic and walker definitions
-🤖 Google Gemini (2.5 Flash) – for AI word generation and hints
-🐍 Python 3.10 – used for Streamlit and backend interface
-🖥️ Streamlit – simple, fast frontend UI
-🧠 Jaseci Runtime – to run and serve Jac programs
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
+* 🧬 JacLang – for core logic and walker definitions
+* 🤖 Google Gemini (2.5 Flash) – for AI word generation and hints
+* 🐍 Python 3.10 – used for Streamlit and backend interface
+* 🖥️ Streamlit – simple, fast frontend UI
+* 🧠 Jaseci Runtime – to run and serve Jac programs
