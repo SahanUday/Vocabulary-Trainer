@@ -1,6 +1,6 @@
-# 📚 Vocabulary Trainer – Team LLMinators
+# 📚 Vocabulary Trainer – Team FutureGEN
 
-This project is a simple **AI-powered vocabulary learning game** built using **Jac** and **Streamlit**, developed by Team **LLMinators**. It helps users improve their vocabulary skills through interactive guessing, intelligent hints, and LLM-backed feedback.
+This project is a simple **AI-powered vocabulary learning game** built using **Jac** and **Streamlit**, developed by Team **FutureGEN**. It helps users improve their vocabulary skills through interactive guessing, intelligent hints, and LLM-backed feedback.
 
 ---
 
