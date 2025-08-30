@@ -117,7 +117,7 @@ $env:GEMINI_API_KEY="your_api_key_here"
 
 Here’s a quick look at how the Vocabulary Trainer Game interface appears:
 
-👉 [Click to watch the demo video](demo/demo_vid.mp4)
+👉 [Click to watch the demo video](demo/Demo_video2.mp4)
 
 <img width="1764" height="854" alt="image" src="https://github.com/user-attachments/assets/c0e7a36f-d8b6-4414-9645-4109985ad0ac" />
 
